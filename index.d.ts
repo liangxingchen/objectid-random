@@ -1,5 +1,7 @@
 
-declare module "objectid-random" {
-  declare function random(): string;
-  export = random;
+declare namespace objectidRandom {
 }
+
+declare function objectidRandom(): string;
+
+export = objectidRandom;
