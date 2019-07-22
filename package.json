@@ -1,0 +1,19 @@
+{
+  "name": "objectid-random",
+  "version": "1.0.0",
+  "description": "Generate random ObjectId",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maichong/objectid-random.git"
+  },
+  "author": "Liang <liang@maichong.it> (https://github.com/liangxingchen)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maichong/objectid-random/issues"
+  },
+  "homepage": "https://github.com/maichong/objectid-random#readme"
+}
