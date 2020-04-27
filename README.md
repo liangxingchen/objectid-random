@@ -1,2 +1,3 @@
 # objectid-random
-Generate random ObjectId
+
+Generate random ObjectId like string

@@ -1,7 +1,9 @@
+declare namespace objectidRandom {}
 
-declare namespace objectidRandom {
-}
-
-declare function objectidRandom(): string;
+/**
+ * Create ObjectId string from Date / milliseconds.
+ * @param {Date|number} [date] optional Date / milliseconds.
+ */
+declare function objectidRandom(date?: Date | number): string;
 
 export = objectidRandom;
