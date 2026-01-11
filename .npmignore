@@ -1,3 +1,8 @@
 .prettierrc.js
 tests
 .history
+.editorconfig
+.prettierignore
+.prettierrc.js
+eslint.config.js
+AGENTS.md

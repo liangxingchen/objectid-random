@@ -1,6 +1,6 @@
 {
   "name": "objectid-random",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Generate random ObjectId like string",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maichong/objectid-random.git"
+    "url": "git+https://github.com/liangxingchen/objectid-random.git"
   },
-  "author": "Liang <liang@maichong.it> (https://github.com/liangxingchen)",
+  "author": {
+    "name": "Liang",
+    "email": "liang@miaomo.cn",
+    "url": "https://github.com/liangxingchen"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maichong/objectid-random/issues"
+    "url": "https://github.com/liangxingchen/objectid-random/issues"
   },
-  "homepage": "https://github.com/maichong/objectid-random#readme"
+  "homepage": "https://github.com/liangxingchen/objectid-random#readme"
 }
