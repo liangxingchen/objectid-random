@@ -1,16 +1,24 @@
-var pads = ['', '0', '00', '000', '0000', '00000', '000000'];
+'use strict';
+
+const pads = ['', '0', '00', '000', '0000', '00000', '000000', '0000000'];
 
 function getTime(date) {
   if (date) {
     if (typeof date === 'object') {
-      if (date.toDate) {
+      if (typeof date.toDate === 'function') {
         date = date.toDate();
+        if (!(date instanceof Date)) {
+          return Date.now() / 1000;
+        }
       }
-      if (date.getTime) {
+      if (typeof date.getTime === 'function') {
         date = date.getTime();
       }
     }
     if (date && typeof date === 'number') {
+      if (date < 0 || date === Infinity) {
+        throw new Error('Invalid date');
+      }
       return date / 1000;
     }
   }
@@ -18,14 +26,18 @@ function getTime(date) {
 }
 
 function random(date) {
-  var result = getTime(date).toString(16).replace('.', '').substr(0, 12);
+  let [second, millisecond] = getTime(date).toString(16).split('.');
+  if (second.length < 8) {
+    second = pads[8 - second.length] + second;
+  }
+  let result = (second + (millisecond || '')).substring(0, 12);
   if (result.length < 12) {
     result += pads[12 - result.length];
   }
   while (result.length < 24) {
     result += Math.random()
       .toString(16)
-      .substr(2, 24 - result.length);
+      .substring(2, 26 - result.length);
   }
   return result;
 }
